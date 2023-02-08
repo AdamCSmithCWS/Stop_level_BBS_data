@@ -73,12 +73,13 @@ qc_all_counts_no_zeros <-  routes_qc %>%
             by = "RouteDataID")
 
 # export to csv, if desired
-write.csv(qc_all_counts_no_zeros,"all_QC_BBS_stop-level_observations.csv",col.names = FALSE)
+write.csv(qc_all_counts_no_zeros,"all_QC_BBS_stop-level_observations.csv",row.names = FALSE)
 
 ```
 
 #### Note this does not include all the zeros.
 
-You'll have to think about how to fill in the appropriate zeros, e.g., the zero counts for species observed on a given route in previous years, but not in a particular year.
+You'll have to think about how to fill in the appropriate zeros, if you need them. e.g., the zero counts for species observed on a given route in previous years, but not in a particular year. 
+Although in lots of situations, those aren't important (the row sums still give a "complete checklist").
 
 Best of luck...
