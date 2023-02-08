@@ -10,7 +10,9 @@ The package is available on CRAN
 install.packages(bbsBayes)
 ```
 
-First download the stop level data. WARNING this overwrites any previous download. If you want the route-level data at some point in teh future, you will need to re-run this fetch_bbs_data with level = "state" (the default) After running this line, you need to type yes to accept the disclaimer
+First download the stop level data. After running this line, you need to type yes to accept the disclaimer.
+
+WARNING this overwrites any previous download. If you want the route-level data at some point in the future, you will need to re-run this fetch_bbs_data with level = "state" (the default) 
 
 ```{r}
 fetch_bbs_data(level = "stop")
@@ -25,7 +27,7 @@ all <- load_bbs_data(level = "stop")
 
 This object is a large list with three items:
 
-1.  bird is the counts at each stop - 1 row for each survey and species observed on the survey
+1.  bird is the counts at each stop - 1 row for each survey and species observed on the survey, and then also 1 column for each of the route's 50 stops.
 
 2.  route is the survey-events - 1 row for each bbs survey conducted
 
