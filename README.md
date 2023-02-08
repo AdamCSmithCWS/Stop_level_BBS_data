@@ -72,6 +72,8 @@ qc_all_counts_no_zeros <-  routes_qc %>%
   left_join(.,bird_qc,
             by = "RouteDataID")
 
+# export to csv, if desired
+write.csv(qc_all_counts_no_zeros,"all_QC_BBS_stop-level_observations.csv",col.names = FALSE)
 
 ```
 
